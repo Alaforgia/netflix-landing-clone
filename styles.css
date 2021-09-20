@@ -2,6 +2,11 @@ body,
 * {
   font-family: "Open Sans", sans-serif;
 }
+body {
+  margin: 0;
+  background-color: black;
+  padding-bottom: 374px;
+}
 .hero-container {
   background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/5a27cb25-33a9-4bcc-b441-95fefabcbd37/4d2d33bb-c8d0-4c01-abaa-6aaa031a943e/US-en-20210823-popsignuptwoweeks-perspective_alpha_website_large.jpg);
   height: 100%;
@@ -16,6 +21,7 @@ body,
   align-items: center;
   padding: 150px 0px;
   z-index: 1;
+  border-bottom: solid #222 8px;
 }
 .hero-container::after {
   content: "";
@@ -62,7 +68,7 @@ p {
   opacity: 0;
 }
 .membership-signup {
-  max-width: 664px;
+  max-width: 760px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -72,7 +78,7 @@ p {
   z-index: 3;
 }
 input {
-  max-width: 500px;
+  max-width: 540px;
   width: 100%;
   height: 60px;
   font-size: 16px;
@@ -83,7 +89,7 @@ button {
   border: none;
   border-radius: 3px;
   color: white;
-  padding: 15px 16px;
+  padding: 15px 40px;
   font-size: 26px;
   white-space: nowrap;
 }
@@ -94,7 +100,7 @@ button {
   border: none;
   border-radius: 3px;
   color: white;
-  padding: 6px 16px;
+  padding: 10px 18px;
   font-size: 16px;
   position: absolute;
   top: 32px;
@@ -106,8 +112,22 @@ button {
   z-index: 3;
   top: 32px;
   right: 170px;
+  height: 100%;
 }
-
+select {
+  padding: 8px 22px;
+  border: 2px solid white;
+  border-radius: 3px;
+  background: black;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+select,
+option {
+  position: relative;
+  z-index: 4;
+}
 .netflix-logo {
   fill: #e50914;
   position: absolute;
@@ -116,6 +136,46 @@ button {
   width: 108px;
   height: auto;
   z-index: 3;
+}
+/* footer styles */
+footer {
+  padding: 70px calc(42.75px + 45px);
+  width: 100%;
+}
+.questions {
+  color: #757575;
+  text-align: left;
+}
+.phone-number {
+  color: #757575;
+  text-decoration: none;
+}
+.footer-list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.footer-list {
+  width: 192px;
+}
+.footer-list > ul {
+  margin: 0;
+  padding: 0;
+}
+.footer-list-item {
+  list-style: none;
+  margin-bottom: 16px;
+}
+.footer-link {
+  color: #757575;
+  text-decoration: none;
+}
+.footer-dropdown select {
+  color: #757575;
+  border-color: #757575;
+  border-width: 1px;
 }
 @media (max-width: 932px) {
   button {
